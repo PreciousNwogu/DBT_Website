@@ -1,0 +1,73 @@
+body {
+  display: block;
+  padding: 30px;
+  margin: auto;
+  background-color: rgb(59, 59, 59);
+}
+header {
+  text-align: center;
+  color: rgb(242, 244, 247);
+}
+
+/* .container-wide{
+	text-align: center;
+   color: rgb(70, 110, 206);
+} */
+
+h3{
+  text-align: center;
+  color: royalblue;
+}
+
+input[type="text"] {
+  border-radius: 10px;
+  width: 25%;
+  padding: 1em;
+  margin: 1em;
+  display: block;
+}
+
+input[type="emailaddress"] {
+  border-radius: 10px;
+  width: 25%;
+  padding: 1em;
+  margin: 1em;
+  display: block;
+}
+
+input[type="submit"],
+input[type="button"] {
+  border-radius: 5px;
+  width: auto;
+  padding: 1em;
+  margin: 1em;
+  background-color: rgb(102, 93, 228);
+}
+
+.button-container {
+  display: flex;
+  justify-content:space-between;
+  gap: 1em;
+  margin-right:20px;
+}
+
+.back-button {
+   padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; 
+}
+
+.form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(250, 247, 253);
+  align-content: center;
+  width: 50%;
+  padding: 40px;
+  border-radius: 10px;
+}
