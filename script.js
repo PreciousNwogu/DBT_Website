@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 fullText.style.display = 'none';
                 this.textContent = 'See More';
             }
+
         });
     });
 });

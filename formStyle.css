@@ -8,11 +8,15 @@ header {
   text-align: center;
   color: rgb(242, 244, 247);
 }
-
-/* .container-wide{
-	text-align: center;
-   color: rgb(70, 110, 206);
+/* h1{
+    text-align: center;
+    color:blue;
 } */
+
+.subOptions1, .subOptions2 {
+  display:none;
+  margin-top:10px;
+}
 
 h3{
   text-align: center;

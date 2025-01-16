@@ -82,7 +82,6 @@
             <div class="col-lg-6">
               <div class="text-lg-right">
                 <ul class="group-middle card-group-custom">
-                  <!-- <li><a class="icon icon-default icon-sm mdi mdi-rss" href="#"></a></li> -->
                   <li><a class="icon icon-default icon-sm mdi mdi-facebook" href="#"></a></li>
                   <li><a class="icon icon-default icon-sm mdi mdi-twitter" href="#"></a></li>
                   <li><a class="icon icon-default icon-sm mdi mdi-whatsapp" href="https://whatsapp.com/biz/"></a></li>

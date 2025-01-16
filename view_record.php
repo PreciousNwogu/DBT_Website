@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+nwogu@DESKTOP-7F2391F MINGW64 /c/xampp/htdocs (main)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/PreciousNwogu/DBT_Website.git'<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

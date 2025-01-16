@@ -8,7 +8,6 @@ $dbname = "user_system_db";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if (!$conn->connect_error){
-    // echo"Database Successfull" ;
 }else {
     die ("connection failed: ".$conn->connect_error);
 }
@@ -23,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO users (firstName, lastName, phoneNumber, emailAddress, homeAddress ) VALUES ('$firstName', '$lastName', $phoneNumber, '$emailAddress', '$homeAddress')";
 
-     // Check if the query was successful
     if ($conn->query($sql) === TRUE) {
         echo "<div class='alert alert-success'>Record added successfully!</div>";
     } else {
@@ -44,7 +42,6 @@ $conn->close();
 <body>
 
 <div class="container mt-4">
-    <!-- Display the buttons to navigate back to the form or view records -->
     <a href="form.php" class="btn btn-primary">Back to Form</a>
     <a href="view_record.php" class="btn btn-secondary">Back to View Records</a>
 </div>

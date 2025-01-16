@@ -58,30 +58,41 @@
       
       <!--Main bunner-->
       
-    <div class="main-bunner-inner">
-        <div class="container wide">
-            <div class="row justify-content-left">
-                <div class="col-lg-5">
-<h1 class="flawless-results" data-caption-animate="fadeInUp" data-caption-delay="100">Flawless <br class="br-none"> Results</h1>
-                    <p class="lead text-custom-blue" style="color: orange;" data-caption-animate="fadeInUp" data-caption-delay="250">
-    Looking for a stylist who delivers <br>neat, long-lasting braids? <br>Experience the expert touch at <br>Dab's Beauty Touch today!
-</p>
+    <div class="main-banner-inner">
+    <div class="container wide">
+        <div class="row align-items-center">
+            <!-- Left Content -->
+            <div class="col-lg-6">
+                <h1 class="flawless-results" data-caption-animate="fadeInUp" data-caption-delay="100">
+                    Flawless <br class="br-none"> Results
+                </h1>
+                <p class="lead text-custom-blue" style="color: orange;" data-caption-animate="fadeInUp" data-caption-delay="250">
+                    Looking for a stylist who delivers <br>neat, long-lasting braids? <br>Experience the expert touch at <br>Dab's Beauty Touch today!
+                </p>
+                <div class="btn-wrap">
+                    <div class="group-xxl group-middle">
+                        <a class="button button-primary button-md button-round-2" href="form.php" 
+                           style="padding: 20px 20px; font-size: 20px;">Book Now</a>
+                        
+                    </div>
+                </div>
+            </div>
 
-<div class="btn-wrap">
-    <div class="group-xxl group-middle">
-        <a class="button button-primary button-md button-round-2" href="form.php" 
-           style="padding: 20px 20px; font-size: 20px;">Book Now</a>
-        <a class="button button-white button-md button-round-2" href="#form-2.php" 
+            <!-- Right Content -->
+            <div class="col-lg-6">
+                <h2 class="title" style="color: orange;">We Deliver Quality Service</h2>
+                <p class="subtitle-2">
+                    With Dab's Beauty Touch, you get the highest level of customer service and the utmost result for your time at a very affordable price.
+                </p>
+                <a class="button button-white button-md button-round-2" href="#form-2.php" 
            style="padding: 22px 20px; font-size:18px;">Book As Gift</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-    </div>
-</div>
-</div>
-</div>
-</div>
-</section>
-            
+
+
 <section id="about">
       <div class="section section-lg bg-secondary">
         <div class="container">
@@ -161,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
             <div class="not-listed">
-              <!-- <p>For any hairstyle not listed, please chat with us on whatsapp </p> -->
+              <p>For any hairstyle not listed, please chat with us on whatsapp </p>
           </div>
             <div class="Notice">
               <p class="fz-18">SAVE THE TIME TO VISIT BEAUTY SUPPLY STORES, BY BUYING EXTENSIONS FROM US. ( IN VARIEITES OF COLORS)</p>   
@@ -274,16 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="divider"></div>
         </div>
       </div>
-      <!-- Services-->
-      <div class="section section section-lg">
-        <div class="container wide">
-          <div class="row row-md-30">
-            <div class="col-md-5 col-lg-5">
-              <!-- <div class="subtitle">Spa-quality service</div> -->
-              <h2 class="title" style="color:orange">We Deliver Quality Service</h2>
-              <div class="subtitle-2">With Dab's Beauty Touch, you get the highest level of customer service and the utmost result for your time at a very affordable price.</div>
-              <div class="btn-wrap"><a class="button button-primary button-md" href="form.php" data-caption-animate="fadeInUp" data-caption-delay="450">Book Now</a></div>
-            </div>
+     
 <div class="section section section-xl">
         <div class="container wide">
           <div class="row row-md-80 row-sm-50">
