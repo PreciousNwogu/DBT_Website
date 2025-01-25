@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "CST8250!";
-$dbname = "user_system_db";
+$dbname = "dbt_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -19,10 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phoneNumber = $_POST["phoneNumber"];
     $emailAddress = $_POST["emailAddress"];
     $homeAddress = $_POST["homeAddress"];
+    $mainOptions = $_POST["mainOptions"];
+    $subOptions1 = $_POST["subOptions1"];
+    $appointmentDate = $_POST["date"];
+    $appointmentTime = $_POST["time"];
+    $message = $_POST["message"];
+    $imageSample = $_POST["imageSample"];
 
-    $sql = "INSERT INTO users (firstName, lastName, phoneNumber, emailAddress, homeAddress ) VALUES ('$firstName', '$lastName', $phoneNumber, '$emailAddress', '$homeAddress')";
 
-    if ($conn->query($sql) === TRUE) {
+
+    $sql = "INSERT INTO appointments (firstName, lastName, phoneNumber, emailAddress, homeAddress, service, length, appointment_date, appointmentTime, message, imageSample ) VALUES ('$firstName', '$lastName', $phoneNumber, '$emailAddress', '$homeAddress', '$mainOptions', '$subOptions1' '$appointmentDate', '$appointmentTime', '$message', '$imageSample')";
+
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
         echo "<div class='alert alert-success'>Record added successfully!</div>";
     } else {
         echo "<div class='alert alert-danger'>Error: " . $sql . "<br>" . $conn->error . "</div>";
@@ -43,7 +53,7 @@ $conn->close();
 
 <div class="container mt-4">
     <a href="form.php" class="btn btn-primary">Back to Form</a>
-    <a href="view_record.php" class="btn btn-secondary">Back to View Records</a>
+    <a href = "updateForm.php" class="btn btn-primary">Update Form</a>
 </div>
 
 </body>

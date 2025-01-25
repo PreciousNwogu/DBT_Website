@@ -8,10 +8,13 @@ header {
   text-align: center;
   color: rgb(242, 244, 247);
 }
-/* h1{
+h1{
     text-align: center;
-    color:blue;
-} */
+    color:orange;
+    margin: 20px 10px;
+    font-family: 'Georgia', serif;
+    font-size: 1.7em;
+}
 
 .subOptions1, .subOptions2 {
   display:none;
@@ -74,4 +77,80 @@ input[type="button"] {
   width: 50%;
   padding: 40px;
   border-radius: 10px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #95a6e3;
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    max-width: 600px;
+    }
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: darkblue;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+table {
+    margin: 20px auto;
+    width: 90%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #a2a1a1;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+.admin{
+      text-align: center;
+    color:orange;
+    text-align: center;
+    margin: 40px 0px;
+    font-family: 'Georgia', serif;
+    font-size: 3em;
 }

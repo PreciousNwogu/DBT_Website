@@ -5,72 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    <link rel="stylesheet" href="formStyle.css">    
+    <link rel="stylesheet" href="formStyle.css">
+    <link rel="stylesheet" href="bootstrap.min.css">    
 </head>
 <body>
     <main>
         
         <div class="form">
-        <form id="SimpleForm" method="post" action="submitForm.php">
-            <h1> Dab's Beauty Touch Booking Form</h1> 
-            <label for="name">First Name:</label>
-            <input Type="text" id="firstName" name="firstName"  value="" required>
+    <form id="SimpleForm" method="post" action="submitForm.php">
+        <h1>Dab's Beauty Touch Booking Form</h1>
+        
+        <label for="name">First Name:</label>
+        <input type="text" id="firstName" name="firstName" value="">
 
-            <label>Last Name:</label>
-            <input Type="text" id="lastName" name="lastName" value="Please enter your last name">
+        <label>Last Name:</label>
+        <input type="text" id="lastName" name="lastName" value="" required>
 
-            <label for="phoneNumber">Phone Number:</label>
-            <input Type="text" id="phoneNumber" name="phoneNumber">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber">
+        <label for="emailAddress">Email Address:</label>
+        <input type="text" id="emailAddress" name="emailAddress">
 
-            <label for="emailAddress">Email Address:</label>
-            <input Type="emailAddress" id="email" name="emailAddress">
+        
+        <label for="homeAddress">Home Address:</label>
+        <input type="text" id="homeAddress" name="homeAddress">
 
-            <label for="homeAddress">Home Address:</label>
-            <input Type="text" id="homeAddress" >
-            <label for "hairStyle"> Choose a Service</label>
-            <select id="mainOptions" onchange="showSubDropdown()" name="mainOptions">
-                <option value="">Please Choose a Style...</option>
-                <option value="Boho Braid">Boho Braids</option>
-                <option value="Knotless Braid">Knotless Braids</option>
-                <option value="Stitch Braid">Stitch Braids</option>
-                <option value="Feed-in Braid">Feed-in Braids</option>
-                <option value="French Braid">French Braids</option>
-                <option value="Twist Braid">Twist Braids</option>
-            </select>
-            <div class="subOptions1" id="subOptions1" >
-            <label for "subOptions1"> Options</label>
-                <select id ="subOptions1" name="subOptions1">
-                <option value="Please Choose a Lenght..." disabled></option>
-                <option value="Lower Back">Lower Back</option>
+        <label for="hairStyle">Choose a Service:</label>
+        <select id="mainOptions" onchange="showSubDropdown()" name="mainOptions">
+            <option value="">Please Choose a Style...</option>
+            <option value="Boho Braid">Boho Braids</option>
+            <option value="Knotless Braid">Knotless Braids</option>
+            <option value="Stitch Braid">Stitch Braids</option>
+            <option value="Feed-in Braid">Feed-in Braids</option>
+            <option value="French Braid">French Braids</option>
+            <option value="Twist Braid">Twist Braids</option>
+        </select>
+
+        <div class="subOptions1" id="subOptions1">
+            <label for="subOptions1">Choose Length:</label>
+            <select id="subOptions1" name="subOptions1" onchange="showSubDropdown()">
+                <option value="">Please Choose a Length...</option>
+                <option value="Neck Length">Neck Length</option>
+                <option value="Shoulder Length">Shoulder Length</option>
+                <option value="Mid Back Length">Mid Back Length</option>
                 <option value="Waist/Butt Length">Waist/Butt Length</option>
                 <option value="Knee Length">Knee Length</option>
-                <option value="Kinky Twists">Kinky Twists</option>
             </select>
         </div>
-            <div class="subOptions2" id="subOptions2" >
-            <label for "subOptions2"> Options</label>
-                <select id ="selectOptions2" name="selectOptions2">
-                <option value="Lower Back">Large</option>
-                <option value="Waist/Butt Length">Medium</option>
-                <option value="Knee Length">Smedium</option>
-                <option value="Kinky Twists">Kinky Twists</option>
+
+        <div class="subOptions2" id="subOptions2">
+            <label for="subOptions2">Choose Size:</label>
+            <select id="subOptions2" name="subOptions2" onchange="showSubDropdown()">
+                <option value="Large">Large</option>
+                <option value="Medium">Medium</option>
+                <option value="Smedium">Smedium</option>
+                <option value="Small">Small</option>
             </select>
+        </div> 
+
+        <div>
+            <br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        </div> 
+
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Have a Sample Picture?</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imageSample">
         </div>
-            <div class="button-container">
-                <input type="submit" value="Submit">
-            </div>
-            <div class="single-prod-wrap">
-                <h2>Important Information</h2>
-                <div class="subtitle-2">
+
+        <div class="single-prod-wrap">
+            <h2>Important Information</h2>
+            <div class="subtitle-2">
                 <input type="checkbox" required>
-                    We accept cash and debit cards only.<br>
-                    Deposits are NON REFUNDABLE under 5 days cancellation notice for bookings made more than 1 week,<br> 
-                    and 2 days for bookings made within a week.<br> 
-                    A deposit is required to secure your booking.
-                </div>
+                A deposit is required to secure your booking.<br>
+                We accept cash and e-terrac transfers only.<br>
+                Deposits are NON-REFUNDABLE under 5 days cancellation notice for bookings made more than 1 week,
+                and 2 days for bookings made within a week.<br>
+                
             </div>
-        </form>
-    </div>
+        </div>
+
+        <div class="button-container">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
 </main>
             <br>
          <section class="container-wide" style=" text-align: center; color: white;">
@@ -105,21 +131,22 @@ TEENAGE BRAIDS: BUY 4 PACKS OF 48”</div>
     </header>
 
     <script>
-        function showSubDropdown(){
-            var mainOptions = document.getElementById("mainOptions");
-            var subOptions1 = document.getElementById("subOptions1");
-            var subOptions2 = document.getElementById("subOptions2");
-            if(mainOptions.value == "Boho Braid" || mainOptions.value == "Knotless Braid" || mainOptions.value == "Stitch Braid" || mainOptions.value == "Feed-in Braid" || mainOptions.value == "French Braid" || mainOptions.value == "Twist Braid"){
-                subOptions1.style.display = "block";
-                subOptions2.style.display = "none";
-            }else if(mainOptions.value == "French Braid" || mainOptions.value == "Twist Braid"){
-                subOptions2.style.display = "block";
-                subOptions1.style.display = "none";
-            }else{
-                subOptions1.style.display = "none";
-                subOptions2.style.display = "none";
-            }
-        }
+        function showSubDropdown() {
+  var mainOptions = document.getElementById("mainOptions");
+  var subOptions1 = document.getElementById("subOptions1");
+  var subOptions2 = document.getElementById("subOptions2");
+
+  if (mainOptions.value && mainOptions.value !== "") { 
+    subOptions1.style.display = "block"; 
+    subOptions2.style.display = "none"; 
+  } else if (subOptions1.value && subOptions1.value !== "") { 
+    subOptions2.style.display = "block"; 
+    subOptions1.style.display = "none"; 
+  } else {
+    subOptions1.style.display = "none"; 
+    subOptions2.style.display = "none"; 
+  }
+}
     </script>
 </body>
 </html>
