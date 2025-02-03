@@ -29,31 +29,12 @@
       <div class="page">
 
     <!-- Carousel -->
-   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/backgroundbraid.jpg" class="d-block w-100" alt="Slide 1">
-            </div>
-            <div class="carousel-item">
-                <img src="images/WhatsApp Image-66.jpg" class="d-block w-100" alt="Slide 2">
-            </div>
-            <div class="carousel-item">
-                <img src="images/webbraids2.jpg" class="d-block w-100" alt="Slide 3">
-            </div>
+     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/backgroundbraid.jpg" class="d-block w-100" alt="#Slide 1">
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+      </div>
     </div>
       
       <!--Main bunner-->
@@ -78,7 +59,6 @@
                 </div>
             </div>
 
-            <!-- Right Content -->
             <div class="col-lg-6">
                 <h2 class="title" style="color: orange;">We Deliver Quality Service</h2>
                 <p class="subtitle-2">
@@ -219,14 +199,14 @@ document.addEventListener('DOMContentLoaded', function() {
                    <div class="box-price-title">
                     <img src="images/wig installation2.jpg" alt="wig installation" width="400" height="400" style="margin-top: 25px;">
                   </div>
-                  <!-- <div class="box-price-title">90min massage</div> -->
+
                   <div class="box-price-descr">Wig fixing, Installation and Revamping</div><a class="button button-secondary button-md" href="form.php">Book Now</a>
                 </div>
               </div>
               <div class="col-xs-10 col-md-6 col-lg-4">
                 <div class="box-price-simple">
-                  <!-- <div class="box-price">$299</div> -->
-                   <div class="box-price-title">
+
+                <div class="box-price-title">
                     <img src="images/WhatsApp-mage11.jpg" alt="Braids" width="400" height="400">
                   </div>
                   <!-- <div class="box-price-title">Braids</div> -->
@@ -237,13 +217,13 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
       </div>
-      <!--Divider-->
+
       <div class="section">
         <div class="container wide">
           <div class="divider"></div>
         </div>
       </div>
-      <!--How Works-->
+
       <div class="section section section-lg">
         <div class="container wide">
           <div class="text-center">
@@ -279,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
       </div>
-      <!--Divider-->
+
       <div class="section">
         <div class="container wide">
           <div class="divider"></div>
@@ -294,8 +274,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="col-sm-12 col-lg-8">
               <div class="card-group-custom" id="accordion1" role="tablist" aria-multiselectable="false">
-                <!--Bootstrap card-->
-                <article class="card card-custom card-group-custom card-corporate">
+
+              <article class="card card-custom card-group-custom card-corporate">
                   <div class="card-heading" role="tab">
                     <div class="card-title"><a class="collapsed" id="accordion1-card-head-qdhcnrnl" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-pibeubsx" aria-controls="accordion1-card-body-pibeubsx" aria-expanded="false" role="button">Do you provide services for children below 3 years?</a></div>
                   </div>
@@ -305,7 +285,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                   </div>
                 </article>
-                <!--Bootstrap card-->
                 <article class="card card-custom card-group-custom card-corporate">
                   <div class="card-heading" role="tab">
                     <div class="card-title"><a class="collapsed" id="accordion1-card-head-pawsxmne" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-prwjvfan" aria-controls="accordion1-card-body-prwjvfan" aria-expanded="false" role="button">How many hours is your cancellation notice and any penalty?</a></div>
@@ -316,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                   </div>
                 </article>
-                <!--Bootstrap card-->
+
                 <article class="card card-custom card-group-custom card-corporate">
                   <div class="card-heading" role="tab">
                     <div class="card-title"><a class="collapsed" id="accordion1-card-head-dlhuyats" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-ptywedtp" aria-controls="accordion1-card-body-ptywedtp" aria-expanded="false" role="button">Do you render home services and do you charge differently for that?</a></div>
@@ -327,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                   </div>
                 </article>
-                <!--Bootstrap card-->
+
                 <article class="card card-custom card-group-custom card-corporate">
                   <div class="card-heading" role="tab">
                     <div class="card-title"><a class="collapsed" id="accordion1-card-head-jmklvxlf" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-pyekkyrk" aria-controls="accordion1-card-body-pyekkyrk" aria-expanded="false" role="button">Do you also do men's hair?</a></div>
@@ -338,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                   </div>
                 </article>
-                <!--Bootstrap card-->
+
                 <article class="card card-custom card-group-custom card-corporate">
                   <div class="card-heading" role="tab">
                     <div class="card-title"><a class="collapsed" id="accordion1-card-head-lwjmljnh" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-card-body-knymhcwg" aria-controls="accordion1-card-body-knymhcwg" aria-expanded="false" role="button">What kind of extensions should i get for my appointment?</a></div>
@@ -373,7 +352,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="section section-lg bg-gray-150">
         <div class="text-center">
           <p class="subtitle">Our customers love DBT</p>
-          <!-- <h2 class="title">Rated #1 massage in New York</h2> -->
           <div class="subtitle-box">
             <div class="subtitle-box-text">Reviews</div>
             </div>

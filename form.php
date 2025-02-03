@@ -12,7 +12,7 @@
     <main>
         
         <div class="form">
-    <form id="SimpleForm" method="post" action="submitForm.php">
+    <form id="SimpleForm" method="post" action="submitForm.php" enctype="multipart/form-data">
         <h1>Dab's Beauty Touch Booking Form</h1>
         
         <label for="name">First Name:</label>
@@ -31,7 +31,7 @@
         <input type="text" id="homeAddress" name="homeAddress">
 
         <label for="hairStyle">Choose a Service:</label>
-        <select id="mainOptions" onchange="showSubDropdown()" name="mainOptions">
+        <select id="mainOptions" name="mainOptions">
             <option value="">Please Choose a Style...</option>
             <option value="Boho Braid">Boho Braids</option>
             <option value="Knotless Braid">Knotless Braids</option>
@@ -43,7 +43,7 @@
 
         <div class="subOptions1" id="subOptions1">
             <label for="subOptions1">Choose Length:</label>
-            <select id="subOptions1" name="subOptions1" onchange="showSubDropdown()">
+            <select id="subOptions1" name="subOptions1">
                 <option value="">Please Choose a Length...</option>
                 <option value="Neck Length">Neck Length</option>
                 <option value="Shoulder Length">Shoulder Length</option>
@@ -55,7 +55,7 @@
 
         <div class="subOptions2" id="subOptions2">
             <label for="subOptions2">Choose Size:</label>
-            <select id="subOptions2" name="subOptions2" onchange="showSubDropdown()">
+            <select id="subOptions2" name="subOptions2">
                 <option value="Large">Large</option>
                 <option value="Medium">Medium</option>
                 <option value="Smedium">Smedium</option>
@@ -107,11 +107,11 @@
             </div>
                 </div>
             </div>
-        </section>
+        </section><br/>
          <div class="images">
-            <img src="images/extention.jpg" alt="extension type 2" style="width: 50%; height: 25%;">
-            <img src="images/extention-2.jpg" alt="extension type 2" style="width: 50%; height: 25%;">
-        </div>
+            <img src="images/extention.jpg" alt="extension type 2" style="width: 20%; height: 10%; display: flex; margin: 0 auto;">
+            <img src="images/extention-2.jpg" alt="extension type 2" style="width: 25%; height: 20%; display: flex; margin: 0 auto;">
+        </div><br/>
     <header>
        <div class="section section section-lg">
         <div class="container wide">
@@ -125,28 +125,38 @@ KNEE LENGTH: BUY FIVE PACKS OF 58” or FOUR PACKS OF 72” ABOVE<br><br>
 
 KINKY TWISTS: BUY 3-5 PACKS FOR MID LENGTH AND 5-7 FOR LOWER BACK/WAIST<br><br>
 
-TEENAGE BRAIDS: BUY 4 PACKS OF 48”</div>
+TEENAGE BRAIDS: BUY 4 PACKS OF 48”</div><br/> 
               <div class="btn-wrap"><a class="button button-primary button-md" href="form.php" data-caption-animate="fadeInUp" data-caption-delay="450">Book Now</a></div>
             </div>
     </header>
 
     <script>
-        function showSubDropdown() {
-  var mainOptions = document.getElementById("mainOptions");
-  var subOptions1 = document.getElementById("subOptions1");
-  var subOptions2 = document.getElementById("subOptions2");
+        document.addEventListener("DOMContentLoaded", function () {
+        var mainOptions = document.getElementById("mainOptions");
+        var subOptions1 = document.getElementById("subOptions1");
+        var subOptions2 = document.getElementById("subOptions2");
 
-  if (mainOptions.value && mainOptions.value !== "") { 
-    subOptions1.style.display = "block"; 
-    subOptions2.style.display = "none"; 
-  } else if (subOptions1.value && subOptions1.value !== "") { 
-    subOptions2.style.display = "block"; 
-    subOptions1.style.display = "none"; 
-  } else {
-    subOptions1.style.display = "none"; 
-    subOptions2.style.display = "none"; 
-  }
-}
+        subOptions1.style.display = "none";
+        subOptions2.style.display = "none";
+
+        mainOptions.addEventListener("change", function () {
+            if (mainOptions.value !== "") {
+            subOptions1.style.display = "block";
+            subOptions2.style.display = "none"; 
+            } else {
+            subOptions1.style.display = "none";
+            subOptions2.style.display = "none";
+            }
+        });
+
+        subOptions1.addEventListener("change", function () {
+            if (subOptions1.value !== "") {
+            subOptions2.style.display = "block";
+            } else {
+            subOptions2.style.display = "none";
+            }
+        });
+        });
     </script>
 </body>
 </html>

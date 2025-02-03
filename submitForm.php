@@ -21,14 +21,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $homeAddress = $_POST["homeAddress"];
     $mainOptions = $_POST["mainOptions"];
     $subOptions1 = $_POST["subOptions1"];
+    $subOptions2 = $_POST["subOptions2"];
     $appointmentDate = $_POST["date"];
     $appointmentTime = $_POST["time"];
     $message = $_POST["message"];
     $imageSample = $_POST["imageSample"];
 
+    
+    if (isset($_FILES['imageSample']) && $_FILES['imageSample']['error'] === 0) {
+    $uploadDir = 'uploads/';
+
+    if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0777, true);
+    }
+
+    $fileName = basename($_FILES['imageSample']['name']);
+    $targetFile = $uploadDir . time() . '_' . $fileName;
+
+    if (move_uploaded_file($_FILES['imageSample']['tmp_name'], $targetFile)) {
+        $imageSample = $targetFile; 
+    } else {
+        echo "<div class='alert alert-danger'>Failed to upload image.</div>";
+        $imageSample = null;
+    }
+} else {
+    echo "<div class='alert alert-danger'>File upload error: " . $_FILES['imageSample']['error'] . "</div>";
+    $imageSample = null;
+}
 
 
-    $sql = "INSERT INTO appointments (firstName, lastName, phoneNumber, emailAddress, homeAddress, service, length, appointment_date, appointmentTime, message, imageSample ) VALUES ('$firstName', '$lastName', $phoneNumber, '$emailAddress', '$homeAddress', '$mainOptions', '$subOptions1' '$appointmentDate', '$appointmentTime', '$message', '$imageSample')";
+
+    $sql = "INSERT INTO appointments (firstName, lastName, phoneNumber, emailAddress, homeAddress, service, size, length,appointment_date, appointment_time, message, image_sample ) VALUES ('$firstName', '$lastName', $phoneNumber, '$emailAddress', '$homeAddress', '$mainOptions', '$subOptions2', '$subOptions1','$appointmentDate', '$appointmentTime', '$message', '$imageSample')";
 
     $result = mysqli_query($conn, $sql);
 
@@ -39,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 $conn->close();
+
 ?>
 
 <!DOCTYPE html>

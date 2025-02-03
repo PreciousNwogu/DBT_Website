@@ -43,6 +43,7 @@
 
     if ($result && $result->num_rows > 0) {
         $records = $result->fetch_all(MYSQLI_ASSOC);
+       
         ?>
     <div class="table-responsive">
         <table border="1" class="table table-striped table-hover table-bordered">
@@ -56,6 +57,11 @@
                     <th>Home Address</th>
                     <th>Service</th>
                     <th>Length</th>
+                    <th>size</th>
+                    <th>Appointment Date</th>
+                    <th>Appointment Time</th>
+                    <th>Message</th>
+                    <th>Image Sample</th>
                 </tr>
             </thead>
             <tbody>
@@ -71,6 +77,11 @@
                         <td><?= htmlspecialchars($record['homeAddress']); ?></td>
                         <td><?= htmlspecialchars($record['service']); ?></td>
                         <td><?= htmlspecialchars($record['length']); ?></td>
+                        <td><?= htmlspecialchars($record['size']); ?></td>
+                        <td><?= htmlspecialchars($record['appointment_date']); ?></td>
+                        <td><?= htmlspecialchars($record['appointment_time']); ?></td>
+                        <td><?= htmlspecialchars($record['message']); ?></td>
+                        <td><?= htmlspecialchars($record['image_sample']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
