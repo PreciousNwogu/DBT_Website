@@ -99,7 +99,7 @@
 </div>
 </main>
             <br>
-         <section class="container-wide" style=" text-align: center; color: white;">
+         <section class="container-wide" style=" text-align: center; color: darkblue;">
             <div class="single-prod-wrap">
                 <div class="extension">
                     Save yourself the hassle of buying an extension; we have a variety available for purchase.<br><br>
@@ -117,7 +117,7 @@
         <div class="container wide">
           <div class="row row-md-30">
             <div class="col-md-5 col-lg-5">
-              <div class="subtitle-2" style="color:royalblue;">LOWER BACK STYLES: BUY ONE PACK OF 48" , TWO PACKS OF 52” AND ONE PACK OF 58 <br><br>
+              <div class="subtitle-2" style="color:darkblue;">LOWER BACK STYLES: BUY ONE PACK OF 48" , TWO PACKS OF 52” AND ONE PACK OF 58 <br><br>
 
 WAIST/BUTT LENGTH STYLES: BUY ONE PACK OF 52” AND THREE PACKS OF 58”<br><br>
 

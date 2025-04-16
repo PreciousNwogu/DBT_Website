@@ -1,15 +1,14 @@
 <?php 
 
-$servername = "localhost";
-$username = "root";
-$password = "CST8250!";
-$dbname = "dbt_db";
+ $servername = "sql312.infinityfree.com";
+    $username = "if0_38252379";
+    $password = "Dab03031997";
+    $dbname = "if0_38252379_dbt_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-if (!$conn->connect_error){
-}else {
-    die ("connection failed: ".$conn->connect_error);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -25,44 +24,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $appointmentDate = $_POST["date"];
     $appointmentTime = $_POST["time"];
     $message = $_POST["message"];
-    $imageSample = $_POST["imageSample"];
+    $imageSample = null;
 
     
     if (isset($_FILES['imageSample']) && $_FILES['imageSample']['error'] === 0) {
-    $uploadDir = 'uploads/';
+        $uploadDir = 'uploads/';
 
-    if (!is_dir($uploadDir)) {
-        mkdir($uploadDir, 0777, true);
-    }
+        
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
+        }
 
-    $fileName = basename($_FILES['imageSample']['name']);
-    $targetFile = $uploadDir . time() . '_' . $fileName;
+        $fileName = basename($_FILES['imageSample']['name']);
+        $targetFile = $uploadDir . time() . '_' . $fileName;
 
-    if (move_uploaded_file($_FILES['imageSample']['tmp_name'], $targetFile)) {
-        $imageSample = $targetFile; 
+        if (move_uploaded_file($_FILES['imageSample']['tmp_name'], $targetFile)) {
+            $imageSample = realpath($targetFile); 
+        } else {
+            echo "<div class='alert alert-danger'>Failed to upload image.</div>";
+        }
     } else {
-        echo "<div class='alert alert-danger'>Failed to upload image.</div>";
-        $imageSample = null;
+        echo "<div class='alert alert-danger'>File upload error: " . $_FILES['imageSample']['error'] . "</div>";
     }
-} else {
-    echo "<div class='alert alert-danger'>File upload error: " . $_FILES['imageSample']['error'] . "</div>";
-    $imageSample = null;
-}
 
+    $sql = "INSERT INTO appointments (firstName, lastName, phoneNumber, emailAddress, homeAddress, service, size, length, appointment_date, appointment_time, message, image_sample) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssssssssss", $firstName, $lastName, $phoneNumber, $emailAddress, $homeAddress, $mainOptions, $subOptions2, $subOptions1, $appointmentDate, $appointmentTime, $message, $imageSample);
 
-    $sql = "INSERT INTO appointments (firstName, lastName, phoneNumber, emailAddress, homeAddress, service, size, length,appointment_date, appointment_time, message, image_sample ) VALUES ('$firstName', '$lastName', $phoneNumber, '$emailAddress', '$homeAddress', '$mainOptions', '$subOptions2', '$subOptions1','$appointmentDate', '$appointmentTime', '$message', '$imageSample')";
-
-    $result = mysqli_query($conn, $sql);
-
-    if ($result) {
-        echo "<div class='alert alert-success'>Record added successfully!</div>";
+    
+    if ($stmt->execute()) {
+        echo "<div class='alert alert-success'>Thanks for booking with DBT!</div>";
     } else {
-        echo "<div class='alert alert-danger'>Error: " . $sql . "<br>" . $conn->error . "</div>";
+        echo "<div class='alert alert-danger'>Error: " . $stmt->error . "</div>";
     }
-}
-$conn->close();
 
+    $stmt->close();
+    $conn->close();
+}
 ?>
 
 <!DOCTYPE html>
@@ -76,8 +76,8 @@ $conn->close();
 <body>
 
 <div class="container mt-4">
-    <a href="form.php" class="btn btn-primary">Back to Form</a>
-    <a href = "updateForm.php" class="btn btn-primary">Update Form</a>
+    <a href="index.php" class="btn btn-primary">Back to Home</a>
+    <!-- <a href="updateForm.php" class="btn btn-primary">Edit Form</a> -->
 </div>
 
 </body>

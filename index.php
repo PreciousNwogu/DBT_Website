@@ -28,7 +28,6 @@
     <section id="home">
       <div class="page">
 
-    <!-- Carousel -->
      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -37,13 +36,12 @@
       </div>
     </div>
       
-      <!--Main bunner-->
       
     <div class="main-banner-inner">
     <div class="container wide">
         <div class="row align-items-center">
-            <!-- Left Content -->
-            <div class="col-lg-6">
+
+        <div class="col-lg-6">
                 <h1 class="flawless-results" data-caption-animate="fadeInUp" data-caption-delay="100">
                     Flawless <br class="br-none"> Results
                 </h1>
@@ -71,7 +69,6 @@
         </div>
     </div>
 </div>
-
 
 <section id="about">
       <div class="section section-lg bg-secondary">
@@ -126,7 +123,7 @@
                 <span class="short-text">We offer natural hair care, including twists and protective styles...</span>
                 <span class="full-text" style="display: none;">Our services are designed to promote healthy hair growth and maintain your natural texture.</span>
                 <a href="#" class="see-more" style="color: #007BFF;
-    font-size: 16px;">See More</a>
+                font-size: 16px;">See More</a>
                 </div>
               </div>
               </div>
@@ -150,14 +147,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-</script>
+      </script>
             <div class="not-listed">
               <p>For any hairstyle not listed, please chat with us on whatsapp </p>
           </div>
             <div class="Notice">
               <p class="fz-18">SAVE THE TIME TO VISIT BEAUTY SUPPLY STORES, BY BUYING EXTENSIONS FROM US. ( IN VARIEITES OF COLORS)</p>   
           </div>  
-        </section> 
+</section> 
 
           <div class="section section-xl">
         <div class="container wide">
@@ -172,20 +169,17 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
 
-      <!--Divider-->
       <div class="section">
         <div class="container wide">
           <div class="divider"></div>
         </div>
       </div>
-      <!--Pricing-->
       <div class="section section-lg">
         <div class="container wide">
           <div class="text-center">
             <div class="row row-md-80 row-sm-60">
               <div class="col-xs-10 col-md-6 col-lg-4">
                 <div class="box-price-simple">
-                  <!-- <div class="box-price">$99</div> -->
                   <div class="box-price-title">
                     <img src="images/hair_mask.png" alt="Knotted Box Braid" width="400" height="400">
                   </div>
